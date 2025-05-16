@@ -1,3 +1,11 @@
 img.recipe-detail-img {
   max-width: 500px;
 }
+
+.backk{
+  background-color: pink;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  
+}

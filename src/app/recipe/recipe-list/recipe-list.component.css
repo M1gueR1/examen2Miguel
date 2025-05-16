@@ -10,3 +10,13 @@ tr:hover {
 thead {
   background-color: palevioletred;
 }
+
+img {
+ height: 50%;
+ width: auto;
+ max-width: 400px;
+}
+
+.prin{
+  background-color: pink;
+}

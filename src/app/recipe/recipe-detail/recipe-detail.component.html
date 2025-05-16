@@ -1,21 +1,72 @@
-<div class="recipe-detail">
-  <h2>{{ recipe.nombre }}</h2>
-  <img
-    class="recipe-detail-img"
-    [src]="recipe.imagen"
-    alt="{{ recipe.imagen }}"
-  />
-  <p><strong>Porciones:</strong> {{ recipe.porciones }}</p>
-  <p><strong>Tiempo:</strong> {{ recipe.tiempo_minutos }} min</p>
-  <h3>Ingredientes</h3>
-  <app-ingredient-list
-    [ingredients]="recipe.ingredientes"
-  ></app-ingredient-list>
 
-  <h3>Pasos</h3>
+
+<div class="backk">
+<div class="recipe-detail">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="card p-2" style="width: 90%; height: 33rem">
+        <div class="row">
+          <div class="col-12">
+            <h2> {{recipeDetail.nombre}}</h2>
+          </div>
+        </div>
+
+        <div class="row">
+                    <div class="col-6"> <img
+              class="recipe-detail-img"
+              [src]="recipeDetail.imagen"
+              alt="{{ recipeDetail.imagen }}"
+            /> </div>
+
+
+              <div class="col-6"> 
+
+                <div class="row">
+                  
+                  <p><strong>porciones: </strong> {{recipeDetail.porciones}} <strong>               tiempo: </strong> {{recipeDetail.tiempo_minutos}}</p>
+                  <p><strong>dificultad: </strong> {{recipeDetail.dificultad}} <strong>             tipo: </strong> {{recipeDetail.tipo}}</p>
+                  
+
+                  
+
+                </div>
+
+                <div class="row">
+                  <h3>Ingredientes</h3>
+
+                  <p><strong>Ingrediente más usado: </strong> {{ingredienteMas(recipeDetail)}}</p>
+
+  <app-ingredient-list
+    [ingredients]="recipeDetail.ingredientes"
+  ></app-ingredient-list>
+                </div>
+
+                <div class="row">
+
+                  <h3>Pasos</h3>
   <ol>
-    <li *ngFor="let step of recipe.pasos">
+    <li *ngFor="let step of recipeDetail.pasos">
       {{ step }}
     </li>
   </ol>
+                </div>
+              </div>
+
+        </div>
+
+        
+
+<button routerLink="/">Regresar</button>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+
 </div>
